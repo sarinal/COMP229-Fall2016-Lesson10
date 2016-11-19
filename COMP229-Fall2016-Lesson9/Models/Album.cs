@@ -9,6 +9,15 @@ namespace COMP229_Fall2016_Lesson9.Models
     [Table("Album")]
     public partial class Album
     {
+        /// <summary>
+        /// This constructor takes one argument title which sets Title property to its value
+        /// </summary>
+        /// <param name="title"></param>
+        /// 
+        public Album(string title)
+        {
+            this.Title = title;
+        }
         public int AlbumId { get; set; }
 
         public int GenreId { get; set; }

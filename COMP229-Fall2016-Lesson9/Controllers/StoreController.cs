@@ -21,7 +21,8 @@ namespace COMP229_Fall2016_Lesson9.Controllers
             {
                 new Genre("Disco"),
                 new Genre("Jazz"),
-                new Genre("Rock")
+                new Genre("Rock"),
+                new Genre("Electronic")
             };
 
             return View(genres);
@@ -30,7 +31,7 @@ namespace COMP229_Fall2016_Lesson9.Controllers
         // GET: /Store/Browse?genre=Disco
         public ActionResult Browse(string genre)
         {
-            if(genre == String.Empty)
+            if(genre == null)
             {
                 genre = "Disco";
             }
